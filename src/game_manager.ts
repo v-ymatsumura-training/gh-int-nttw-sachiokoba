@@ -119,7 +119,9 @@ export class GameManager {
    */
   static addRandomTile(): void {
     if (Grid.cellsAvailable()) {
+
       const value = Math.random() < 0.5 ? 2 : 4
+      
       const cell = Grid.randomAvailableCell()
 
       if (cell !== null) Grid.insertTile(new Tile(cell, value))
